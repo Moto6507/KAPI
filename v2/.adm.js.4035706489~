@@ -1,0 +1,237 @@
+import express from 'express'
+var app = express()
+import fs from 'fs'
+import path from 'path'
+let logs = new console.Console(fs.createWriteStream(path.join() + '/structures/logger.txt'));
+import Database from './../structures/db.js'
+import ffmetadata from 'ffmetadata';
+var data = new Database('user.data',false)
+var posts = new Database('posts.data',true)
+export let
+  create = express.Router().post('/api/v2/create', async function (req, res) {
+  if(!req.headers.authorization) return res
+  .status(403)
+  .json({
+    status: 403,
+    message:"Not authorized"
+  });
+var 
+  aut = req.headers.authorization,
+  body = req.body,
+  d = new Date();
+  var h = new Date(d).getHours();
+  var m = new Date(d).getMinutes();
+
+h = (h<10) ? '0' + h : h;
+m = (m<10) ? '0' + m : m;
+  if(aut.split(' ')[0]!=="KAdm" || aut.split(' ')[1]!==process.env['pkay']) return res
+  .status(403)
+  .json({
+    status: 403,
+    message:"Incorrect administrative key."
+  });
+  if(data.has(body.enc)) return res
+  .status(500)
+  .json({
+    status: 500,
+    message:"The user already exits."
+  });
+  logs.log("[ KAPI ]: received request (POST) : /create  - " + ('0' + d.getDate()).slice(-2) + '/' + ('0' + (d.getMonth() + 1)).slice(-2) + '/' + ('000' + d.getFullYear()).slice(-4) + " at " + new Date( new Date().getTime() + -3 * 3600 * 1000).toUTCString().replace( / GMT$/, "" ).match(/\d\d:\d\d/)[0])
+  data.insert(body.enc, {
+    "infos": {
+      "adm": "",
+      "KKey": "",
+      "avatar": "",
+      "background": "",
+      "badges": "",
+      "blocks": "",
+      "biography": "",
+      "gender": "",
+      "band": "",
+      "createdAt": new Date().getTime(),
+      "devices": "",
+      "judged": false,
+      "emailEncripted": ,
+      "follow": [
+        7293
+      ],
+      "followers": [
+        7293
+      ],
+      "identifier": 9090,
+      "notifications": "",
+      "password": "moto",
+      "playlists": [
+        {
+          "id": "vrg0",
+          "name": "Karaoke!",
+          "musics": [
+            "mjf7iqjgcv",
+            "34d0n3dnmd",
+            "36qorckupz",
+            "4s00b12fw0"
+          ],
+          "public": true,
+          "identifier": 9090
+        }
+      ],
+      "loves": "",
+      "theme": 0,
+      "username": "MOTO"
+    }
+  })
+    
+return res.status(200).json({
+   status:200
+})
+}),
+ db = express.Router().post('/api/v2/db', async function (req, res) {
+  if(!req.headers.authorization) return res
+  .status(403)
+  .json({
+    status: 403,
+    message:"Not authorized"
+  });
+var 
+  aut = req.headers.authorization,
+  body = req.body,
+  d = new Date();
+if(aut.split(' ')[0]!=="KAdm" || aut.split(' ')[1]!==process.env['pkay']) return res
+  .status(403)
+  .json({
+    status: 403,
+    message:"Incorrect administrative key."
+  });
+   logs.log("[ KAPI ]: received request (POST) : /db  - " + ('0' + d.getDate()).slice(-2) + '/' + ('0' + (d.getMonth() + 1)).slice(-2) + '/' + ('000' + d.getFullYear()).slice(-4) + " at " + new Date( new Date().getTime() + -3 * 3600 * 1000).toUTCString().replace( / GMT$/, "" ).match(/\d\d:\d\d/)[0])
+  if(!body.type) return res
+  .status(404)
+  .json({
+    status: 404,
+    message:"undeclared type."
+  });
+ if(body.post) {
+   if(body.type=="set") {
+   posts.insert(body.name, body.struct)
+   return res
+  .status(200)
+  .json({
+    status: 200
+  });
+ }
+ if(body.type=="update") {
+   posts.update(body.name, body.path, body.struct)
+   return res
+  .status(200)
+  .json({
+    status: 200
+  });
+ }
+ if(body.type=="get") {
+   return res
+  .status(200)
+  .json({
+    status: 200,
+    data: posts.get(body.struct)
+  });
+ }
+ if(body.type=="has") {
+   return res
+  .status(200)
+  .json({
+    status: 200,
+    has: posts.has(body.struct)
+  });
+ }
+ if(body.type=="remove") {
+   posts.remove(body.struct)
+   return res
+  .status(200)
+  .json({
+    status: 200,
+    finish: true
+  });
+ }
+ if(body.type=="all") {
+   return res
+  .status(200)
+  .json({
+    status: 200,
+    data: posts.all()
+  });
+ }
+ }
+ if(body.type=="set") {
+   data.update(body.name, body.path, body.struct)
+   return res
+  .status(200)
+  .json({
+    status: 200
+  });
+ }
+ if(body.type=="get") {
+   return res
+  .status(200)
+  .json({
+    status: 200,
+    data: data.get(body.struct).infos
+  });
+ }
+ if(body.type=="has") {
+   return res
+  .status(200)
+  .json({
+    status: 200,
+    has: data.has(body.struct)
+  });
+ }
+ if(body.type=="remove") {
+   data.remove(body.struct, body.struct2, body.struct3)
+   return res
+  .status(200)
+  .json({
+    status: 200,
+    finish: true
+  });
+ }
+ if(body.type=="all") {
+   return res
+  .status(200)
+  .json({
+    status: 200,
+    data: data.all()
+  });
+ }
+}),
+  editFil = express.Router().post('/api/v2/editFil', async function (req, res) {
+  if(!req.headers.authorization) return res
+  .status(403)
+  .json({
+    status: 403,
+    message:"Not authorized"
+  });
+var 
+  aut = req.headers.authorization,
+  body = req.body,
+  d = new Date();
+  var h = new Date(d).getHours();
+  var m = new Date(d).getMinutes();
+
+h = (h<10) ? '0' + h : h;
+m = (m<10) ? '0' + m : m;
+  if(aut.split(' ')[0]!=="KAdm" || aut.split(' ')[1]!==process.env['pkay']) return res
+  .status(403)
+  .json({
+    status: 403,
+    message:"Incorrect administrative key."
+  });
+if(body.type==="unlink") {
+fs.unlinkSync("data/" + body.id)
+  return res
+    .status(200)
+} else {
+ffmetadata.write("data/songs/tracks/" + body.id + ".mp3", { title: body.title }, function(err) {
+	if (err) console.error("Error writing metadata", err);
+	else console.log("Data written");
+ });
+}
+}); 

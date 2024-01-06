@@ -1,0 +1,38 @@
+{
+  "dark.js6507@gmail.com": {
+      "adm": true,
+      "acessKey": "",
+      "avatar": "media/avatars/54c0cfce535b8adc2ca6",
+      "background": "media/backgrounds/cb137ef31bfdb3ae04d5",
+      "verified": true,
+      "blockedUsers": "",
+      "stars": [],
+      "bands": {},
+      "biography": "Only the creator of karaoke... A platform baby!",
+      "createdAt": 1669543222902,
+      "devices": [],
+      "judged": false,
+      "emailEncripted": "dark.js6507@gmail.com",
+      "follow": [],
+      "followers": [
+        7293
+      ],
+      "identifier": 9090,
+      "notifications": "",
+      "password": "monica",
+      "playlists": [
+        {
+          "id": "ulgf",
+          "name": "Karaoke!",
+          "musics": [
+            "ilp0su8tik",
+            "f8rjxpaad1"
+          ],
+          "public": true,
+          "identifier": 9090
+        }
+      ],
+      "theme": 5,
+      "username": "MOTO"
+    }
+}

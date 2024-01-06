@@ -1,0 +1,29 @@
+{
+  "name": "KAPI",
+  "version": "1.0.8",
+  "description": "Karaoke API",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "chokidar": "^3.5.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-rate-limit": "^6.7.0",
+    "ffmetadata": "^1.7.0",
+    "fs-jetpack": "^5.1.0",
+    "helmet": "^6.0.1",
+    "node-cron": "^3.0.2",
+    "node-fetch": "^3.2.6",
+    "node-id3": "^0.2.6",
+    "scrypto": "^1.0.3",
+    "sharp": "^0.32.6"
+  }
+}
