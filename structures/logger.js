@@ -58,6 +58,23 @@ export class Logger {
  showLogs() {
    return Object.keys(this.fileContent).map(y => this.fileContent[y])
  }
+ chartString() {
+  let
+    logs = this.showLogs(),
+    formData = [];
+    logs.map(x=>{
+      const monthOfLogs = new Intl.DateTimeFormat("en-US", { month: "long" }).format(x.date).slice(0, 3) + ". " + new Intl.DateTimeFormat("en-US", { year: "numeric" }).format(x.date);
+      if(!formData.find(x=>x.month===monthOfLogs)) {
+      formData.push({ month: monthOfLogs, reqs: 0});
+    } else {
+      const monthData = formData[formData.findIndex(x=>x?.month===monthOfLogs)]
+      monthData.reqs = monthData.reqs + 1
+    }
+  })
+   return formData.map(x=>`<div class='barContainer'>
+        <div class="bar" style='width: ${x.reqs}px'>${x.reqs}</div> <div class='number'>${x.month}</div>
+      </div>`).join(" ")
+ }
  archive() {
    const idLogger = id()
    this.fileContent["archive"] = "archived " + idLogger

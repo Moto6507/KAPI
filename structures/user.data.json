@@ -1,38 +1,59 @@
 {
   "dark.js6507@gmail.com": {
-      "adm": true,
-      "acessKey": "",
-      "avatar": "media/avatars/54c0cfce535b8adc2ca6",
-      "background": "media/backgrounds/cb137ef31bfdb3ae04d5",
-      "verified": true,
-      "blockedUsers": "",
-      "stars": [],
-      "bands": {},
-      "biography": "Only the creator of karaoke... A platform baby!",
-      "createdAt": 1669543222902,
-      "devices": [],
-      "judged": false,
-      "emailEncripted": "dark.js6507@gmail.com",
-      "follow": [],
-      "followers": [
-        7293
-      ],
-      "identifier": 9090,
-      "notifications": "",
-      "password": "monica",
-      "playlists": [
-        {
-          "id": "ulgf",
-          "name": "Karaoke!",
-          "musics": [
-            "ilp0su8tik",
-            "f8rjxpaad1"
-          ],
-          "public": true,
-          "identifier": 9090
-        }
-      ],
-      "theme": 5,
-      "username": "MOTO"
-    }
+    "adm": true,
+    "accessKey": "6ghob8.ykz_9090",
+    "avatar": "54c0cfce535b8adc2ca6",
+    "background": "",
+    "verified": true,
+    "blockedUsers": "",
+    "stars": [],
+    "bands": {},
+    "biography": "Only the creator of karaoke... A platform baby!",
+    "createdAt": 1669543222902,
+    "devices": [],
+    "judged": false,
+    "emailEncripted": "dark.js6507@gmail.com",
+    "follow": [],
+    "followers": [],
+    "identifier": 9090,
+    "notifications": "",
+    "password": "monica",
+    "playlists": [
+      {
+        "name": "playlists",
+        "id": "ht5jhf6",
+        "musics": [
+          "vytfjfdHdkhgdEWshbt4wgeRszjtfc"
+        ],
+        "forks": 0,
+        "public": false,
+        "by": 9090
+      }
+    ],
+    "theme": 5,
+    "username": "MOTO"
+  },
+  "a@gmail.com": {
+    "adm": true,
+    "accessKey": "1xiu1x.sq2_7958",
+    "avatar": "user",
+    "background": "",
+    "verified": false,
+    "blockedUsers": [],
+    "stars": [],
+    "bands": {},
+    "biography": ",jhfvkhgckhgc",
+    "createdAt": 1705434365759,
+    "devices": [],
+    "judged": false,
+    "emailEncripted": "a@gmail.com",
+    "follow": [],
+    "followers": [],
+    "identifier": 7958,
+    "notifications": "",
+    "password": "56rggTgfx",
+    "playlists": [],
+    "theme": 0,
+    "username": "cooluser"
+  }
 }

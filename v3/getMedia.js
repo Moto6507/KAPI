@@ -19,8 +19,9 @@ export const getMedia = express.Router().get('/api/v3/get/media/:type/:opcionalP
   if(!fs.existsSync(image)) res.sendFile(path.resolve() + "/media/mediaNoFound.svg")
   return res.sendFile(image)
   }
-  if(type==="song") {
-    const song = path.resolve() + "/media/" + type + "/" + opcionalParam
+  if(type==="songs") {
+    const song = path.resolve() + "/media/" + type + "/" + opcionalParam + '.mp3'
+    console.log(song)
     if(!fs.existsSync(song)) return res.send("no sound");
     var stat = fs.statSync(song);
     if (req.headers.range) {

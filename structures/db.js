@@ -54,15 +54,18 @@ class Database {
       }
       this.db[collection] = data
       return this.writeToFile(this.db);
-    } else {
-      if (!this.db[collection]) {
+    }
+    if (!this.db[collection]) {
         this.db[collection] = "";
       }
       this.db[collection] = data;
       return this.writeToFile(this.db);
-    }
-  }
-
+   }
+  updateCertainObject(object) {
+      const [ collection, data ] = object;
+      this.db[collection][Object.keys(data)[0]] = Object.values(data)[0]
+      this.writeToFile(this.db)
+      }
   update(collection, path, value) {
     this.load()
     const keys = path.split('.');

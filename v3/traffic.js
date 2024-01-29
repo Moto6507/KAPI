@@ -6,6 +6,7 @@ export const traffic = express.Router().get('/api/v3/traffic', (req, res) => {
   <html>
   <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
   <style>
   body {
     margin: 0;
@@ -58,10 +59,38 @@ export const traffic = express.Router().get('/api/v3/traffic', (req, res) => {
    margin: 2px;
    display: inline-block
  }
+ .chart {
+  border: 2px solid rgb(68,68,68);
+  border-radius: 5px;
+  margin: 5px;
+  color: #fff;
+  padding: 2px;
+}
+.chart .barContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.chart .barContainer .bar {
+  height: 30px;
+  width: 100%;
+  margin-right: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  color: #b2beff;
+  align-items: center;
+  justify-content: center;
+  background: #425fff
+}
+.chart .barContainer .number {
+  margin-left: auto;
+}
 </style>
 <title>Karaoke API traffic</title>
 </head>
 <body>
+<div class="chart">${logs.chartString()}</div>
 ${logs.showLogs().map(x=>`
 <div class='container'>
   <div class='status ${x.status===500? "error" : ""}'>${x.status}</div><br>
