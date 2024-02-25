@@ -24,6 +24,7 @@ export const getMedia = express.Router().get('/api/v3/get/media/:type/:opcionalP
     console.log(song)
     if(!fs.existsSync(song)) return res.send("no sound");
     var stat = fs.statSync(song);
+    const total = stat.size
     if (req.headers.range) {
         var range = req.headers.range;
         var parts = range.replace(/bytes=/, "").split("-");
@@ -40,9 +41,12 @@ export const getMedia = express.Router().get('/api/v3/get/media/:type/:opcionalP
             'Content-Type': 'audio/mpeg'
         });
         readStream.pipe(res);
+        return;
      } else {
         res.writeHead(200, { 'Content-Length': stat.size, 'Content-Type': 'audio/mpeg' });
-        fs.createReadStream(song).pipe(res);
+        const readStream = fs.createReadStream(song)
+        readStream.pipe(res);
+        return;
     }
   }
   if(type==="lyrics") {

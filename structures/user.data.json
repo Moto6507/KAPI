@@ -1,7 +1,7 @@
 {
   "dark.js6507@gmail.com": {
     "adm": true,
-    "accessKey": "6ghob8.ykz_9090",
+    "accessKey": "1xu5n0.wk7_4959190311062808",
     "avatar": "54c0cfce535b8adc2ca6",
     "background": "",
     "verified": true,
@@ -12,26 +12,31 @@
     "createdAt": 1669543222902,
     "devices": [],
     "judged": false,
-    "emailEncripted": "dark.js6507@gmail.com",
+    "email": "dark.js6507@gmail.com",
     "follow": [],
     "followers": [],
-    "identifier": 9090,
+    "identifier": 4959190311062808,
     "notifications": "",
     "password": "monica",
     "playlists": [
       {
-        "name": "playlists",
-        "id": "ht5jhf6",
+        "name": "first playlist on karaoke",
+        "id": "bmb09mmvq9ug1",
         "musics": [
           "vytfjfdHdkhgdEWshbt4wgeRszjtfc"
         ],
         "forks": 0,
-        "public": false,
+        "public": true,
         "by": 9090
       }
     ],
-    "theme": 5,
-    "username": "MOTO"
+    "theme": "im4",
+    "username": "MOTO",
+    "playlist": {
+      "0": {
+        "public": true
+      }
+    }
   },
   "a@gmail.com": {
     "adm": true,
@@ -46,7 +51,7 @@
     "createdAt": 1705434365759,
     "devices": [],
     "judged": false,
-    "emailEncripted": "a@gmail.com",
+    "email": "a@gmail.com",
     "follow": [],
     "followers": [],
     "identifier": 7958,

@@ -61,10 +61,9 @@ class Database {
       this.db[collection] = data;
       return this.writeToFile(this.db);
    }
-  updateCertainObject(object) {
-      const [ collection, data ] = object;
-      this.db[collection][Object.keys(data)[0]] = Object.values(data)[0]
-      this.writeToFile(this.db)
+  updateCertainObject(collection, path, value) {
+      this.db[collection][path] = value
+      this.writeToFile(this.db);
       }
   update(collection, path, value) {
     this.load()

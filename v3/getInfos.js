@@ -39,7 +39,8 @@ export const getInfos = express.Router().get('/api/v3/get/infos/:identifier', as
     if(isPostDB) return res.status(200).json(dataPosts.all())
     else return res.status(200).json(data.all())
   }
-  const user = data.robustSearch(id) || dataPosts.robustSearch(id)
+  const isPost = req.params.post;
+  const user = isPost? dataPosts.get(id) : data.robustSearch(id) || dataPosts.robustSearch(id)
   if(!user) return res.json({ status: 500, message: "key not recognized" })
   logs.logs({
     status: 200,

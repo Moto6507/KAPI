@@ -6,6 +6,7 @@ import compression from 'compression';
 import { getMedia } from './v3/getMedia.js'
 import { getInfos } from './v3/getInfos.js'
 import { traffic } from './v3/traffic.js'
+import { upload } from './v3/uploader.js'
 import { actions } from './v3/actions.js'
 const apiVersion = "/api/v3/"
 const app = express();
@@ -35,6 +36,7 @@ app.get(apiVersion + "get/media/:type/:opcionalParam", getMedia);
 app.get(apiVersion + "get/infos/:identifier", getInfos)
 app.get(apiVersion + "traffic", traffic)
 app.post(apiVersion + "actions", actions)
+app.post(apiVersion + "upload", upload)
 
 // API Configuration
 const PORT = 8080;
