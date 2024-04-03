@@ -126,5 +126,37 @@
     "ip": "::ffff:127.0.0.1",
     "message": "infos of 2zgvm6cqh80yi34h will be required.",
     "date": 1712106259758
+  },
+  "7e57a3019294": {
+    "status": 200,
+    "route": "/api/v3/get/infos/k0o18lk3l5kpwtzi",
+    "method": "GET",
+    "ip": "::ffff:127.0.0.1",
+    "message": "infos of k0o18lk3l5kpwtzi will be required.",
+    "date": 1712106427335
+  },
+  "9847e98ef1c8": {
+    "status": 200,
+    "route": "/api/v3/get/media/lyrics/2174501559312560",
+    "method": "GET",
+    "ip": "::ffff:127.0.0.1",
+    "message": "media lyrics is required",
+    "date": 1712106427375
+  },
+  "7295cb321844": {
+    "status": 200,
+    "route": "/api/v3/get/infos/g62b4yzn6b09q341",
+    "method": "GET",
+    "ip": "::ffff:127.0.0.1",
+    "message": "infos of g62b4yzn6b09q341 will be required.",
+    "date": 1712106714277
+  },
+  "dcc57a50011e": {
+    "status": 200,
+    "route": "/api/v3/get/media/lyrics/9533646534278469",
+    "method": "GET",
+    "ip": "::ffff:127.0.0.1",
+    "message": "media lyrics is required",
+    "date": 1712106714295
   }
 }
