@@ -1,8 +1,8 @@
 {
   "dark.js6507@gmail.com": {
     "adm": true,
-    "accessKey": "1xu5n0.wk7_4959190311062808",
-    "avatar": "54c0cfce535b8adc2ca6",
+    "accessKey": "8ej757.ma9_4959190311062808",
+    "avatar": "0ylr64gfg2obpjqxwy",
     "background": "",
     "verified": true,
     "blockedUsers": "",
@@ -16,49 +16,75 @@
     "follow": [],
     "followers": [],
     "identifier": 4959190311062808,
-    "notifications": "",
+    "notifications": [
+      "<h2 class='title'>new playlist</h2> you have a new playlist, named <strong>mm</strong>.",
+      "<h2 class='title'>new playlist</h2> you have a new playlist, named <strong>mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</strong>."
+    ],
     "password": "monica",
     "playlists": [
       {
-        "name": "first playlist on karaoke",
-        "id": "bmb09mmvq9ug1",
+        "name": "playlist ~1",
+        "id": "fwu131uhsmp06",
         "musics": [
-          "vytfjfdHdkhgdEWshbt4wgeRszjtfc"
+          "2zgvm6cqh80yi34h",
+          "k0o18lk3l5kpwtzi",
+          "g62b4yzn6b09q341"
+        ],
+        "hideMusics": [
+          "pz0swdcf19jmjs7i"
         ],
         "forks": 0,
-        "public": true,
-        "by": 9090
+        "public": false,
+        "by": 4959190311062808
       }
     ],
     "theme": "im4",
-    "username": "MOTO",
-    "playlist": {
-      "0": {
-        "public": true
-      }
-    }
+    "username": "MOTO"
   },
   "a@gmail.com": {
-    "adm": true,
-    "accessKey": "1xiu1x.sq2_7958",
+    "adm": false,
+    "accessKey": "52akmu.ryx_6200599817600406",
     "avatar": "user",
     "background": "",
     "verified": false,
     "blockedUsers": [],
     "stars": [],
     "bands": {},
-    "biography": ",jhfvkhgckhgc",
-    "createdAt": 1705434365759,
+    "biography": "bbbbeeeaaaassst",
+    "createdAt": 1710102052092,
     "devices": [],
     "judged": false,
     "email": "a@gmail.com",
     "follow": [],
     "followers": [],
-    "identifier": 7958,
-    "notifications": "",
-    "password": "56rggTgfx",
+    "identifier": 6200599817600406,
+    "notifications": [],
+    "password": "Vinicius13",
+    "playlists": [],
+    "theme": "im1",
+    "username": "beast"
+  },
+  "d@gmail.com": {
+    "adm": false,
+    "accessKey": "e9iwa3.zfv_2857739478122863",
+    "avatar": "user",
+    "background": "",
+    "verified": false,
+    "blockedUsers": [],
+    "stars": [],
+    "bands": {},
+    "biography": "nnnnnn",
+    "createdAt": 1711663136809,
+    "devices": [],
+    "judged": false,
+    "email": "d@gmail.com",
+    "follow": [],
+    "followers": [],
+    "identifier": 2857739478122863,
+    "notifications": [],
+    "password": "123Mk123",
     "playlists": [],
     "theme": 0,
-    "username": "cooluser"
+    "username": "beast"
   }
 }

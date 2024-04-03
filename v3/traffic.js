@@ -1,5 +1,6 @@
 import express from 'express'
 import { Logger } from './../structures/logger.js'
+import { f } from './../functions.js'
 const logs = new Logger();
 export const traffic = express.Router().get('/api/v3/traffic', (req, res) => {
   res.send(`<!DOCTYPE html>
@@ -91,12 +92,17 @@ export const traffic = express.Router().get('/api/v3/traffic', (req, res) => {
 </head>
 <body>
 <div class="chart">${logs.chartString()}</div>
-${logs.showLogs().map(x=>`
-<div class='container'>
+${logs.showLogs().sort((a, b) =>{
+  a = new Date(a.date).getTime()
+  b = new Date(b.date).getTime()
+  return b - a
+    }).map(x=>`
+<div class='container' id='${x.date}'>
   <div class='status ${x.status===500? "error" : ""}'>${x.status}</div><br>
   <div class='method'>${x.method}</div>
   <div class='route'>${x.route}</div>
   <div class='route smallInformation'>${x.ip}</div><br>
+  <div class='route smallInformation'>${f(x.date)}</div><<br>
   <div class='route smallInformation'>${x.message}</div>
 </div>
 `).join(" ")}

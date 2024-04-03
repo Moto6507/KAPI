@@ -1,15 +1,79 @@
 {
-  "dark.js6507@gmail.com": {
-    "title": "bloody mary",
-    "id": "vytfjfdHdkhgdEWshbt4wgeRszjtfc",
-    "stars": 0, 
-    "by": 4959190311062808,
-    "listeners": 0, 
-    "comments": [],
-    "albumParticipation": null, 
-    "musicFile": "87t87t76fg7i6ryikytk6t7i", 
-    "thumbnail": "645465h5468j576irt86546e",
-    "lyrics": "",
-    "gender": "non" 
-  }
+  "dark.js6507@gmail.com": [
+    {
+      "title": "bad romance",
+      "id": "g62b4yzn6b09q341",
+      "keywords": "ladyGaga",
+      "stars": 0,
+      "by": 4959190311062808,
+      "listeners": 0,
+      "comments": [],
+      "albumParticipation": null,
+      "musicFile": "8944110996508070",
+      "thumbnail": "0077561165936288",
+      "lyrics": "9533646534278469",
+      "genre": "",
+      "gender": "pop"
+    },
+    {
+      "title": "sol e lua",
+      "id": "pz0swdcf19jmjs7i",
+      "keywords": "sol",
+      "stars": 0,
+      "by": 4959190311062808,
+      "listeners": 0,
+      "comments": [],
+      "albumParticipation": null,
+      "musicFile": "2981725603593863",
+      "thumbnail": "5097588866071936",
+      "lyrics": "3889014573567181",
+      "genre": "",
+      "gender": "pop"
+    },
+    {
+      "title": "do acaso",
+      "id": "k0o18lk3l5kpwtzi",
+      "keywords": "doAcaso",
+      "stars": 0,
+      "by": 4959190311062808,
+      "listeners": 0,
+      "comments": [],
+      "albumParticipation": null,
+      "musicFile": "0522548943788663",
+      "thumbnail": "8794139508403031",
+      "lyrics": "2174501559312560",
+      "genre": "",
+      "gender": "pop"
+    },
+    {
+      "title": "barbie",
+      "id": "swvrjkmqqnnz4a9v",
+      "keywords": "barbiegirl",
+      "stars": 0,
+      "by": 4959190311062808,
+      "listeners": 0,
+      "comments": [],
+      "albumParticipation": null,
+      "musicFile": "3719145898539132",
+      "thumbnail": "2869685018206909",
+      "lyrics": "3669254409536229",
+      "genre": "",
+      "gender": "pop"
+    },
+    {
+      "title": "its over inst",
+      "id": "2zgvm6cqh80yi34h",
+      "keywords": "steven",
+      "stars": 0,
+      "by": 4959190311062808,
+      "listeners": 0,
+      "comments": [],
+      "albumParticipation": null,
+      "musicFile": "5339073636863667",
+      "thumbnail": "5169719059901747",
+      "lyrics": "",
+      "genre": "",
+      "gender": "pop"
+    }
+  ]
 }

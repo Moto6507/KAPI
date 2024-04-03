@@ -13,14 +13,16 @@ export const getInfos = express.Router().get('/api/v3/get/infos/:identifier', as
   if(id==='search') {
     const text = req.query.q;
     const track = req.query.track;
-    const findPosts = (x) => (x.title.toLowerCase().includes(text) ||  x.gender.toLowerCase().includes(text) || x.lyrics.toLowerCase().includes(text))
+    const findPosts = (x) => (x.title?.toLowerCase().includes(text) ||  x.genre.toLowerCase().includes(text) || x.keywords?.toLowerCase().includes(text) || x.lyrics.toLowerCase().includes(text))
     let
     results = [],
     posts = dataPosts.all();
     posts = posts.map(x=>{
-      if(!x.lyrics) return x
-      const musicLyrics = fs.readFileSync(path.resolve() + '/media/lyrics/' + x.lyrics + '.lrc');
-      x['lyrics'] = musicLyrics
+      if(x.lyrics && !x.lyrics.includes('[')) {
+      const musicLyrics = fs.readFileSync(path.resolve() + '/media/lyrics/' + x.lyrics + '.lrc', 'utf8');
+      x.lyrics = musicLyrics
+      }
+      return x
     })
     posts.map(x=>findPosts(x)? results.push(x) : '')
     if(results.length < 1) return res.status(404).json({ status: 404, message: 'key not found' });

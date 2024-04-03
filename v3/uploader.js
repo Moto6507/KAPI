@@ -37,13 +37,13 @@ export const upload = router.post('/api/v3/upload', async function(req, res) {
       file += file.replace('+', ' ');
       if (file.includes("data:image/jpeg;base64,")) {
       let buffer = new Buffer(file, 'base64')
-        if (last !== "media/avatars/user") fs.unlinkSync("data/" + last + ".png")
+        if (last !== "media/avatars/user") fs.unlinkSync("media/avatars/" + last + ".png")
         return sharp(buffer)
-          .toFile("data/media/avatars/" + id + ".png")
+          .toFile("media/avatars/" + id + ".png")
       }
      let buffer = new Buffer(file, 'base64').toString('binary');
-      if (last !== "media/avatars/user") fs.unlinkSync("data/" + last + ".png")
-      fs.writeFileSync("data/media/avatars/" + id + ".png", buffer, "binary", function(err) {
+      if (last !== "media/avatars/user") fs.unlinkSync("media/avatars/" + last + ".png")
+      fs.writeFileSync("media/avatars/" + id + ".png", buffer, "binary", function(err) {
         console.log(err);
       });
     }
@@ -55,11 +55,11 @@ export const upload = router.post('/api/v3/upload', async function(req, res) {
         let buffer = new Buffer(bfile, 'base64')
         if (last) fs.unlinkSync("data/" + last + ".png")
         return sharp(buffer)
-          .toFile("data/media/backgrounds/" + uuid + ".png")
+          .toFile("media/backgrounds/" + uuid + ".png")
       }
         let buffer = new Buffer(file, 'base64').toString('binary');
-      if (last) fs.unlinkSync("data/" + last + ".png")
-      fs.writeFileSync("data/media/backgrounds/" + id + ".png", buffer, "binary", function(err) {
+      if (last) fs.unlinkSync(last + ".png")
+      fs.writeFileSync("media/backgrounds/" + id + ".png", buffer, "binary", function(err) {
         console.log(err);
       });
     }
@@ -73,10 +73,10 @@ export const upload = router.post('/api/v3/upload', async function(req, res) {
       if (file.includes("data:image/jpeg;base64,")) {
         let buffer = new Buffer(file, 'base64')
         return sharp(buffer)
-          .toFile("data/media/thumbnails/" + id + ".png")
+          .toFile("media/thumbnails/" + id + ".png")
       }
         let buffer = new Buffer(file, 'base64').toString('binary');
-      fs.writeFileSync("data/media/thumbnails/" + id + ".png", buffer, "binary", function(err) {
+      fs.writeFileSync("media/thumbnails/" + id + ".png", buffer, "binary", function(err) {
         console.log(err);
       });
     }
@@ -86,18 +86,18 @@ export const upload = router.post('/api/v3/upload', async function(req, res) {
         .replace(/^data:audio\/mpeg;base64,/, "")
         file += file.replace("+", " ")
      const buffer = Buffer.from(file, "base64").toString("binary")
-  fs.writeFileSync("data/songs/tracks/" + id + ".mp3", buffer, 'binary',  function(err) {
+  fs.writeFileSync("media/songs/" + id + ".mp3", buffer, 'binary',  function(err) {
   if(err) return console.log(err);
   node.write({
     title: title,
     artist: username
-  }, "./data/songs/tracks/" + id + ".mp3", function(err) {
+  }, "./songs/" + id + ".mp3", function(err) {
     if(err) return console.log(err)
   })
     })
     }
     if(lyrics) {
-      fs.writeFile('data/songs/lyrics/' + lyrics.id + ".lrc", lyrics.content, (err) => {
+      fs.writeFile('media/lyrics/' + lyrics.id + ".lrc", lyrics.content, (err) => {
         if (err) {
           console.log("cannot create lyrics " + err)
         }

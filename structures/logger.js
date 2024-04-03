@@ -36,7 +36,7 @@ export class Logger {
     })
     chd.watch(this.filePath).on('change', () => {
         this.fileContent = JSON.parse(fs.readFileSync(this.filePath, 'utf8'));
-         if(this.showLogs().length>700) this.archive()
+         if(this.showLogs().length>=700) this.archive()
   })
   }
  logs(obj) {

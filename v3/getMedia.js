@@ -49,10 +49,11 @@ export const getMedia = express.Router().get('/api/v3/get/media/:type/:opcionalP
         return;
     }
   }
+console.log(type)
   if(type==="lyrics") {
-    const lyrics = path.resolve() + "/media/" + type + "/" + opcionalParam
+    const lyrics = path.resolve() + "/media/" + type + "/" + opcionalParam + '.lrc';
     if(!fs.existsSync(lyrics)) return res.send("No lyrics")
-    res.sendFile(lyrics)
+    return res.sendFile(lyrics)
   }
   return res.send("no media allowed")
 });
