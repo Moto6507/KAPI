@@ -18,7 +18,7 @@ class Database {
     chd.watch(this.filePath).on('change', (event, filename) => {
       filename = path.resolve() + "/structures/" + filename
         let d = new Date()
-        console.log("[ KAPI ]: database changed - " + ('0' + d.getDate()).slice(-2) + '/' + ('0' + (d.getMonth() + 1)).slice(-2) + '/' + ('000' + d.getFullYear()).slice(-4) + " at " + new Date(new Date().getTime() + -3 * 3600 * 1000).toUTCString().replace(/ GMT$/, "").match(/\d\d:\d\d/)[0])
+        console.log("\x1b[34m", "[ KAPI ]", "\x1b[0m", ": database changed - " + ('0' + d.getDate()).slice(-2) + '/' + ('0' + (d.getMonth() + 1)).slice(-2) + '/' + ('000' + d.getFullYear()).slice(-4) + " at " + new Date(new Date().getTime() + -3 * 3600 * 1000).toUTCString().replace(/ GMT$/, "").match(/\d\d:\d\d/)[0])
         this.load();
     });
   }

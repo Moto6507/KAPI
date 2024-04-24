@@ -77,7 +77,7 @@ export class Logger {
  }
  archive() {
    const idLogger = id()
-   this.fileContent["archive"] = "archived " + idLogger
+   this.fileContent["archive"] = "archived " + idLogger + "_" + f(new Date().getTime())
    fs.writeFileSync(`${path.resolve()}/structures/archives/log${idLogger}.json`, JSON.stringify(this.fileContent, null, 2))
   return this.writeToFile()
  }

@@ -3,3 +3,7 @@
 /package.json
 /VS
 /media
+/structures/archives
+/structures/logger.json
+/structures/posts.data.json
+/structures/user.data.json

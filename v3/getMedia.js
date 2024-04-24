@@ -21,7 +21,7 @@ export const getMedia = express.Router().get('/api/v3/get/media/:type/:opcionalP
   }
   if(type==="songs") {
     const song = path.resolve() + "/media/" + type + "/" + opcionalParam + '.mp3'
-    console.log(song)
+    console.log("[ WEB ]: required music file " + song)
     if(!fs.existsSync(song)) return res.send("no sound");
     var stat = fs.statSync(song);
     const total = stat.size
@@ -49,7 +49,6 @@ export const getMedia = express.Router().get('/api/v3/get/media/:type/:opcionalP
         return;
     }
   }
-console.log(type)
   if(type==="lyrics") {
     const lyrics = path.resolve() + "/media/" + type + "/" + opcionalParam + '.lrc';
     if(!fs.existsSync(lyrics)) return res.send("No lyrics")

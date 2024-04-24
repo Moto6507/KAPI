@@ -3,6 +3,7 @@ import cors from 'cors';
 import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 import compression from 'compression';
+import localtunnel from 'localtunnel'
 import { getMedia } from './v3/getMedia.js'
 import { getInfos } from './v3/getInfos.js'
 import { traffic } from './v3/traffic.js'
@@ -14,7 +15,7 @@ const app = express();
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://karaoke.loca.lt',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }));
@@ -40,6 +41,8 @@ app.post(apiVersion + "upload", upload)
 
 // API Configuration
 const PORT = 8080;
-app.listen(PORT, () => {
-	console.log("\x1b[34m", "[ KAPI ]", "\x1b[0m", ": API is online, running on port :", "\x1b[32m", `(${PORT})`);
-});
+app.listen(PORT, async() => {
+    console.log("\x1b[34m", "[ KAPI ]", "\x1b[0m", ": API is online, running on port :", "\x1b[32m", `(${PORT})`, "\x1b[0m");
+    const tunnel = await localtunnel({ port: 8080, subdomain: 'kapi' })
+    console.log("[ WEB ]: linked domain: " + tunnel.url)
+})

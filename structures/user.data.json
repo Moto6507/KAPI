@@ -1,7 +1,7 @@
 {
   "dark.js6507@gmail.com": {
     "adm": true,
-    "accessKey": "8ej757.ma9_4959190311062808",
+    "accessKey": "au98mm.63n_4959190311062808",
     "avatar": "0ylr64gfg2obpjqxwy",
     "background": "",
     "verified": true,
@@ -18,7 +18,7 @@
     "identifier": 4959190311062808,
     "notifications": [
       "<h2 class='title'>new playlist</h2> you have a new playlist, named <strong>mm</strong>.",
-      "<h2 class='title'>new playlist</h2> you have a new playlist, named <strong>mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</strong>."
+      "<h2 class='title'>new playlist</h2> you have a new playlist, named <strong>Bb</strong>."
     ],
     "password": "monica",
     "playlists": [
@@ -26,13 +26,10 @@
         "name": "playlist ~1",
         "id": "fwu131uhsmp06",
         "musics": [
-          "2zgvm6cqh80yi34h",
-          "k0o18lk3l5kpwtzi",
-          "g62b4yzn6b09q341"
+          "t26kek56pvixmt13",
+          "ukmhns0scu6313p8"
         ],
-        "hideMusics": [
-          "pz0swdcf19jmjs7i"
-        ],
+        "hideMusics": [],
         "forks": 0,
         "public": false,
         "by": 4959190311062808
@@ -43,7 +40,7 @@
   },
   "a@gmail.com": {
     "adm": false,
-    "accessKey": "52akmu.ryx_6200599817600406",
+    "accessKey": "cywhdu.usr_6200599817600406",
     "avatar": "user",
     "background": "",
     "verified": false,
@@ -58,15 +55,28 @@
     "follow": [],
     "followers": [],
     "identifier": 6200599817600406,
-    "notifications": [],
+    "notifications": [
+      "<h2 class='title'>new playlist</h2> you have a new playlist, named <strong>idk</strong>.",
+      "<h2 class='title'>new playlist</h2> you have a new playlist, named <strong>idk</strong>."
+    ],
     "password": "Vinicius13",
-    "playlists": [],
-    "theme": "im1",
+    "playlists": [
+      {
+        "name": "idk",
+        "id": "0gp5hw7ol4bs5",
+        "musics": [],
+        "hideMusics": [],
+        "forks": 0,
+        "public": false,
+        "by": 6200599817600406
+      }
+    ],
+    "theme": "im4",
     "username": "beast"
   },
   "d@gmail.com": {
     "adm": false,
-    "accessKey": "e9iwa3.zfv_2857739478122863",
+    "accessKey": "dkei22.4lk_2857739478122863",
     "avatar": "user",
     "background": "",
     "verified": false,
